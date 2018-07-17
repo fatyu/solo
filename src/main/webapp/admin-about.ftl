@@ -35,8 +35,8 @@
     </div>
     <div class="module-body padding12">
         <div class="about-logo">
-            <a href="http://b3log.org" target="_blank">
-                <img src="${staticServePath}/images/logo.png" alt="Solo" title="Solo" />
+            <a href="https://www.notalk.cc" target="_blank">
+                <img src="${staticServePath}/images/logo.png" alt="notalk.cc" title="Notalk.cc" />
             </a>
         </div>
         <div class="left" style="width: 73%">
@@ -81,7 +81,6 @@
             </div>
         </div>
         <span class="clear" />
-        <br>
     </div>
 </div>
 ${plugins}

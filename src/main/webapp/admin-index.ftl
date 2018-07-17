@@ -15,8 +15,8 @@
         <div class="tip tip-msg"><span id="tipMsg"></span></div>
         <div id="allPanel">
             <div id="top">
-                <a href="http://b3log.org" target="_blank" class="hover">
-                    Solo
+                <a href="https://www.notalk.cc" target="_blank" class="hover">
+                    伴读小书童
                 </a>
                
                 <span class="right"> 
@@ -133,7 +133,7 @@
             </div>
             <div class="clear"></div>
             <div class="footer">
-                Powered by <a href="http://b3log.org" target="_blank">B3log 开源</a> • <a href="https://hacpai.com/tag/solo" target="_blank">Solo</a> ${version}
+                notalk.cc偷偷的使用 <a href="http://b3log.org/services/#solo" target="_blank">Solo</a>
             </div>
         </div>
         <script src="${staticServePath}/js/lib/compress/admin-lib.min.js"></script>
