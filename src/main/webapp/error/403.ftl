@@ -6,36 +6,59 @@
         <title>${blogTitle} - 403 Forbidden!</title>
         <link type="text/css" rel="stylesheet" href="${staticServePath}/css/default-init${miniPostfix}.css?${staticResourceVersion}" charset="utf-8" />
         <link rel="icon" type="image/png" href="${staticServePath}/favicon.png" />
+		<style type="text/css">
+			canvas {
+				display: block;
+			}
+		</style>
     </head>
     <body>
-        <div class="wrapper">
-            <div class="wrap">
-                <div class="content">
-                    <div class="logo">
-                        <a href="http://b3log.org" target="_blank">
-                            <img border="0" width="153" height="56" alt="B3log" title="B3log" src="${staticServePath}/images/logo.jpg"/>
-                        </a>
-                    </div>
-                    <div class="main">
-                        <h2>403 Forbidden!</h2>
-                        <img class="img-403" src="${staticServePath}/images/403.png" alt="403: forbidden" title="403: forbidden" />
-                        <div class="a-403">
-                            <a href="${servePath}">Index</a> |
-                            <a href="${loginURL}">Login</a>
-                        </div>
-                        <a href="http://b3log.org" target="_blank">
-                            <img border="0" class="icon" alt="B3log" title="B3log" src="${staticServePath}/favicon.png"/>
-                        </a>
-                    </div>
-                    <span class="clear"></span>
-                </div>
-            </div>
-        </div>
+		<canvas id="canvas"></canvas>
         <div class="footerWrapper">
             <div class="footer">
                 &copy; ${year}
-                Powered by <a href="http://b3log.org" target="_blank">B3log 开源</a>, ver ${version}
+                Powered by <a href="https://www.xiayi.ren" target="_blank">xiayi.ren-荣耀使用Solo::</a>, ver ${version} --><a href="${loginURL}">重新登录</a>
             </div>
         </div>
+		<script>
+			function $(id) {
+				return document.getElementById(id);
+			}
+			//画布 的大小设置
+			var mywindow = window.screen;
+			var canvas = $("canvas");
+			canvas.width = mywindow.width;
+			canvas.height = mywindow.height;
+			//要输出的信息
+			var str = "403";
+			str = str.split("");
+			var fontSize = 24;//输出字体的大小
+			//每列显示多少个信息
+			var cols = canvas.width / fontSize;
+			//数组，统计下落的位置
+			var drops = [];
+			for (var i = 0; i < cols; i++) {
+				drops[i] = 1;
+			}
+			var ctx = canvas.getContext("2d");
+			function draw() {
+				ctx.fillStyle = "rgba(0,0,0,0.05)";
+				ctx.fillRect(0, 0, canvas.width, canvas.height);
+				ctx.fillStyle = "green";
+				ctx.font = fontSize + "px arial";
+				for (var i = 0; i < cols; i++) {
+					var text = str[Math.floor(Math.random() * (str.length))];
+					// console.info("x-"+i*fontSize);
+					// console.info("y-"+drops[i]*fontSize);
+					ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+					if (drops[i] * fontSize > canvas.height || Math.random() > 0.95)
+						drops[i] = 0;//把位置恢复到最上面
+						//控制下落的位置
+					drops[i]++;
+				}
+			}
+			setInterval(draw, 33);
+		</script>
     </body>
+	
 </html>
