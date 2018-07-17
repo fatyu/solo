@@ -3,10 +3,10 @@
     <head>
         <meta charset="utf-8" />
         <title>${blogTitle}</title>
-        <meta name="keywords" content="Solo,Java 博客,开源" />
-        <meta name="description" content="An open source blog with Java. Java 开源博客" />
-        <meta name="owner" content="B3log Team" />
-        <meta name="author" content="B3log Team" />
+        <meta name="keywords" content="Notalk,Java 博客,开源" />
+        <meta name="description" content="notalk.cc" />
+        <meta name="owner" content="notalk" />
+        <meta name="author" content="notalk" />
         <meta name="generator" content="Solo" />
         <meta name="copyright" content="B3log" />
         <meta name="revised" content="B3log, ${year}" />
@@ -19,10 +19,9 @@
             <div class="wrap">
                 <div class="content">
                     <div class="logo">
-                        <a href="http://b3log.org" target="_blank">
-                            <img border="0" width="153" height="56" alt="B3log" title="B3log" src="${staticServePath}/images/logo.jpg"/>
-                        </a>
-                    </div>
+                         <a href="https://www.notalk.cc" target="_blank">
+                            <img border="0" width="200" height="200" alt="notalk" title="notalk" src="${staticServePath}/images/logo.jpg"/>
+                        </a>                    </div>
                     <div class="main register">
                         <h2>${registerSoloUserLabel}</h2>
                         <div class="form">
@@ -57,7 +56,7 @@
             <div class="footerWrapper">
                 <div class="footer">
                     &copy; ${year} - <a href="${servePath}">${blogTitle}</a><br/>
-                    Powered by <a href="http://b3log.org" target="_blank">B3log 开源</a> • <a href="https://hacpai.com/tag/solo" target="_blank">Solo</a> ${version}
+                    Powered by <a href="http://b3log.org" target="_blank">B3log 开源</a> • <a href="http://b3log.org/services/#solo" target="_blank">Solo</a> ${version}
                 </div>
             </div>
         </div>
