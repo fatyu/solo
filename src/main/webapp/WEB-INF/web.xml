@@ -84,7 +84,7 @@
     
     <session-config>
         <session-timeout>
-            5
+           60
         </session-timeout>
     </session-config>
     
