@@ -259,7 +259,7 @@ pre code, pre tt {
 
 .fn-wrap {
     width: 80%;
-    max-width: 768px;
+    max-width: 1024px;
     margin: 0 auto
 }
 
